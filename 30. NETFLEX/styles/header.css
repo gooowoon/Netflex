@@ -1,0 +1,110 @@
+.header {
+    height: 55px;
+    background-color: #121212;      
+    display: flex;               /* 레이아웃 틀 */
+    flex-direction: row;         /* 레이아웃 정방향 정렬 */
+    justify-content: space-between;     /* 아이템 일정간격 배치 / 끝에 밀착 */
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 50;
+    transition: opacity 1s;
+}
+
+.left-section {                   /* 좌 */
+    display: flex;
+    align-items: center;
+
+}
+
+.netflix {
+    height: 60px;
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 50px;
+}
+
+.메뉴 {
+    height: 30px;
+    width: 30px;
+}
+
+
+
+
+
+.right-section {                        /* 우 */
+    display: flex;
+    background-color: #121212;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.search-button {
+    background-color: #121212;                                          
+    height: 40px;
+    width: 66px;
+    border: none;
+    margin-left: -1px;
+    margin-right: 10px;
+
+}
+
+.돋보기 {
+    height: 25px;
+}
+
+
+.upload-icon-container {
+    height: 40px;
+    margin-left: -1px;
+    margin-right: 10px;
+}
+
+
+
+
+.search-button,
+.upload-icon-container {
+    display: flex;
+    justify-content: center;      /*주축을 따라 정렬정의*/
+    align-items: center;              /*축의 수직방향 기준 정렬*/
+    position: relative;         /*요소 자기 자신 기준으로 배치*/
+}
+
+
+.search-button .tooltip,
+.upload-icon-container .tooltip {
+    position: absolute;
+    background-color: gray;
+    padding: 4px 8px 4px 8px;
+    bottom: -30px;
+    border-radius: 2px;
+    font-size: 12px;
+    opacity: 0;
+    transform: opacity 0.15s;
+    white-space: nowrap;        /*긴 글씨 한줄 정리*/
+    color: white;
+}
+
+
+.search-button:hover .tooltip,
+.upload-icon-container:hover .tooltip {
+    opacity: 1;
+}
+
+
+
+
+.사용자 {
+    height: 55px;
+    border-radius: 1px;
+    margin-left: -1px;
+    margin-right: 10px;
+}
+
+
+
+

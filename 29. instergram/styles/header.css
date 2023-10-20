@@ -1,0 +1,79 @@
+.header {
+    width: 100%;
+    height: 44px;
+    background-color: #FFFFFF;
+    display: flex;                  /* display: 웹 페이지의 layout 결정 */ 
+    justify-content: center;        /* justify-content : flex box 중 하나, flex 요소의 수평방향 정렬 */
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;                 /* z-index : 요소들의 수직 위치, 클수록 위로 오라옴, 정수 */
+    border-bottom: 1px solid #DBDBDB;   /* 헤더 아래 구분선 */
+}
+
+.header_content {
+    width: 100%;
+    max-width: 975px;
+    padding: 0 14px;                /* padding : 내용(content)과 테두리(border) 사이의 간격 */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;             /* justify-content : flex box 중 하나, flex 요소의 수직방향 정렬 */
+}
+
+.header_logo {
+    margin-top: 5px;
+}
+
+.header_search {
+    width: 216px;
+    height: 28px;
+    display: none;      /* 크기에 따라 반응형(media)으로 제작하기 위해 */
+    align-items: center;
+    position: relative;     /* 이미지를 absolute를 사용해 안에 넣기 위해서 */
+}
+
+@media (min-width: 768px) {
+    .header_search {
+        display: flex;
+    }
+}
+
+.header_search img {        
+    width: 12px;
+    height: 12px;
+
+    position: absolute;     /* 서치이미지를 서치바안에 넣음 */
+    top: 8px;
+    left: 8px;
+}
+
+.header_search input {               /* 서치바 속 이미지 조정 및 서치바 조정 */
+    width: 100%;
+    height: 100%;
+    background-color: #FAFAFA;
+    padding: 4px 10px 4px 28px;
+    border: 1px solid #DBDBDB;
+    border-radius: 4px;
+    outline: none;
+    font-size: 12px;
+    font-weight: 300;
+    color: #999999;
+    text-overflow: hidden;
+    white-space: nowrap;    /* white-space 속성 : 스페이스와 탭, 줄바꿈, 자동줄바꿈 설정 */
+}
+
+
+.header_search input:focus {       /* focus를 사용해 글자색 변환 */
+    color: #262626;
+}
+
+.header_buttons {               /* 세가지 버튼 디자인 조정 */
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.profile_picture {              /* 프로필 디자인 조정 */
+    width: 24px;
+    border-radius: 50%;
+}

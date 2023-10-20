@@ -1,0 +1,21 @@
+.side-menu {
+    max-width: 290px;
+    position: fixed;
+    left: 50%;
+    top: 84px;
+    transform: translateX(calx(-50% + 322px));          /* transform : 요소의 크기, 형태 위치 변화*/
+    display: none;                                      /* translate(tx,ty,tz) : x축과 y축,z축으로 이동 */
+    flex-direction: column;                             /* calc() : 괄호 안의 식을 계산한 결과를 속성값으로 사용하게 해주는 함수*/
+}
+
+.side-menu_footer {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+@media (min-width: 1024px) {        /* 화면이 커질 때만 사이드메뉴가 보이게 */
+    .side-menu {
+        display: flex;
+    }
+}
